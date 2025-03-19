@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #464646;
+  --primary-color: #000;
   --background-color: #fff;
   --light-gray: #f8f8f8;
   --text-color: rgba(0, 0, 0, 0.85);
@@ -39,10 +39,35 @@ header {
   opacity: 0.7;
 }
 
+/* Research Statement */
+.research-statement h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.date {
+  color: var(--secondary-text);
+  margin-bottom: 1.5rem;
+}
+
+.statement-content {
+  max-width: 70%;
+  margin-bottom: 3rem;
+}
+
+/* Projects Heading */
+.projects-heading {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Table Styling */
 .research-table {
   width: 100%;
-  border-collapse: separate; /* Change from collapse to separate */
-  border-spacing: 3rem 50; /* This creates horizontal spacing between cells */
+  border-collapse: collapse;
 }
 
 .research-table tr {
@@ -58,21 +83,17 @@ header {
   vertical-align: top;
 }
 
-.question-column img {
-    width: 100%;         /* Make images fill the column width */
-    height: auto;        /* Maintain aspect ratio */
-    display: block;      /* Remove any extra space below images */
-    margin-bottom: 0;    /* Remove any bottom margin */
+.question-column {
+  width: 30%;
+}
+
+.spacer-column {
+  width: 3rem;
+  min-width: 3rem;
 }
 
 .content-column {
-  width: 70%;
-  padding-left: 50rem; /* Space before the second column */
-}
-}
-
-.content-column {
-  width: 70%;
+  width: 65%;
 }
 
 .content-column h2 {
@@ -86,26 +107,17 @@ header {
   margin-top: 0;
 }
 
+.question-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 hr {
   border: none;
   height: 1px;
   background-color: var(--light-gray);
   margin: 3rem 0;
-}
-
-.research-statement h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-}
-
-.date {
-  color: var(--secondary-text);
-  margin-bottom: 1.5rem;
-}
-
-.statement-content {
-  max-width: 70%;
 }
 
 footer {
@@ -131,8 +143,14 @@ footer {
     padding: 1rem 0;
   }
   
-  .question-column {
+  .question-column,
+  .spacer-column {
     padding-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .spacer-column {
+    display: none;
   }
   
   .research-table tr {
