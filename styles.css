@@ -92,8 +92,8 @@ header {
 }
 
 .spacer-column {
-  width: 3rem;
-  min-width: 3rem;
+  width: 1rem;
+  min-width: 1rem;
 }
 
 .content-column {
