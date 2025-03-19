@@ -58,9 +58,11 @@ header {
   vertical-align: top;
 }
 
-.question-column {
-  width: 30%;
-  padding-right: 10rem !important; /* Adding !important to override any conflicting styles */
+.question-column img {
+    width: 100%;         /* Make images fill the column width */
+    height: auto;        /* Maintain aspect ratio */
+    display: block;      /* Remove any extra space below images */
+    margin-bottom: 0;    /* Remove any bottom margin */
 }
 
 .content-column {
