@@ -110,9 +110,10 @@ header {
 }
 
 .question-column img {
-  width: 100%;
-  height: auto;
+  width: 100%;       /* This makes images fill their container */
+  height: auto;      /* Maintains aspect ratio */
   display: block;
+  max-width: 300px;  /* Add this to limit maximum width */
 }
 
 hr {
