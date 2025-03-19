@@ -60,7 +60,7 @@ header {
 
 .question-column {
   width: 30%;
-  padding-right: 5rem; /* Space after the first column */
+  padding-right: 20rem; /* Space after the first column */
 }
 
 .content-column {
