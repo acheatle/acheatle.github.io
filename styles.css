@@ -24,11 +24,13 @@ header {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
+
 .bio p {
-  font-size: 2.5rem;  /* Increase this value to make it larger */
-  font-weight: 500; /* Makes the text slightly bolder */
+  font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
+
 .main-nav {
   margin-top: 2rem;
 }
@@ -71,7 +73,8 @@ header {
 /* Table Styling */
 .research-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;  /* Changed from collapse to separate */
+  border-spacing: 1.5rem 0;   /* Added horizontal spacing between cells */
 }
 
 .research-table tr {
@@ -89,11 +92,6 @@ header {
 
 .question-column {
   width: 22%;
-}
-
-.spacer-column {
-  width: 0.75rem;
-  min-width: 0.75rem;
 }
 
 .content-column {
@@ -135,6 +133,10 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 800px) {
+  .research-table {
+    border-spacing: 0;  /* Remove spacing on mobile */
+  }
+  
   .research-table, 
   .research-table tbody, 
   .research-table tr, 
@@ -147,14 +149,8 @@ footer {
     padding: 1rem 0;
   }
   
-  .question-column,
-  .spacer-column {
-    padding-right: 0;
+  .question-column {
     margin-bottom: 1rem;
-  }
-  
-  .spacer-column {
-    display: none;
   }
   
   .research-table tr {
