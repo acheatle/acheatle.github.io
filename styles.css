@@ -73,16 +73,24 @@ header {
 /* Table Styling */
 .research-table {
   width: 100%;
-  border-collapse: separate;  /* Changed from collapse to separate */
-  border-spacing: 1.5rem 0;   /* Added horizontal spacing between cells */
+  border-collapse: separate;
+  border-spacing: 1rem 0;  /* Reduced from 1.5rem to 1rem */
 }
 
-.research-table tr {
-  border-bottom: 1px solid var(--light-gray);
+.question-column {
+  width: 22%;
+  max-width: 250px;  /* Adjust this to your preferred width */
 }
 
-.research-table tr:last-child {
-  border-bottom: none;
+.question-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;  /* Make image fill the column but not exceed it */
+}
+
+.content-column {
+  width: 73%;
 }
 
 .research-table td {
