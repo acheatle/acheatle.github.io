@@ -25,6 +25,10 @@ header {
   font-size: 1.2rem;
 }
 
+.main-nav {
+  margin-top: 2rem;
+}
+
 .main-nav a {
   margin-right: 2rem;
   text-decoration: none;
@@ -55,15 +59,12 @@ header {
 }
 
 .question-column {
-  width: 25%;
-  padding-right: 1.5rem;
+  width: 30%;
+  padding-right: 2rem;
 }
 
-.tags-column {
-  width: 15%;
-  color: var(--secondary-text);
-  font-size: 0.9rem;
-  padding-right: 1.5rem;
+.content-column {
+  width: 70%;
 }
 
 .content-column h2 {
@@ -71,6 +72,10 @@ header {
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0.8rem;
+}
+
+.content-column p {
+  margin-top: 0;
 }
 
 hr {
@@ -91,12 +96,20 @@ hr {
   margin-bottom: 1.5rem;
 }
 
+.statement-content {
+  max-width: 70%;
+}
+
 footer {
   margin-top: 3rem;
   color: var(--secondary-text);
   font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
 }
 
+/* Responsive Styles */
 @media (max-width: 800px) {
   .research-table, 
   .research-table tbody, 
@@ -110,12 +123,15 @@ footer {
     padding: 1rem 0;
   }
   
-  .question-column, 
-  .tags-column {
+  .question-column {
     padding-right: 0;
   }
   
   .research-table tr {
     padding: 2rem 0;
+  }
+  
+  .statement-content {
+    max-width: 100%;
   }
 }
