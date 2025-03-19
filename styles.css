@@ -60,8 +60,13 @@ header {
 
 .question-column {
   width: 30%;
-  padding-right: 10rem;
-  border-right: 1px solid var(--light-gray); /* Adds a subtle dividing line */
+  padding-right: 3rem; /* Space after the first column */
+}
+
+.content-column {
+  width: 70%;
+  padding-left: 3rem; /* Space before the second column */
+}
 }
 
 .content-column {
