@@ -88,16 +88,16 @@ header {
 }
 
 .question-column {
-  width: 30%;
+  width: 22%;
 }
 
 .spacer-column {
-  width: 5%;
-  min-width: 1rem;
+  width: 0.75rem;
+  min-width: 0.75rem;
 }
 
 .content-column {
-  width: 65%;
+  width: 73%;
 }
 
 .content-column h2 {
