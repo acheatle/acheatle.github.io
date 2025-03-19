@@ -42,7 +42,7 @@ header {
 .research-table {
   width: 100%;
   border-collapse: separate; /* Change from collapse to separate */
-  border-spacing: 3rem 10; /* This creates horizontal spacing between cells */
+  border-spacing: 3rem 25; /* This creates horizontal spacing between cells */
 }
 
 .research-table tr {
