@@ -24,7 +24,11 @@ header {
   margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
-
+.bio p {
+  font-size: 2.5rem;  /* Increase this value to make it larger */
+  font-weight: 500; /* Makes the text slightly bolder */
+  margin-bottom: 0.5rem;
+}
 .main-nav {
   margin-top: 2rem;
 }
