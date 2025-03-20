@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amy Cheatle - Research Portfolio</title>
+    <title>Amy Cheatle - Research Portfolio | Human-Computer Interaction & Craft Studies</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+        
+        /* Base accessibility settings */
+        html {
+            font-size: 100%; /* Allows users to resize text in browsers */
+        }
+        
+        :focus {
+            outline: 3px solid #e83e8c;
+            outline-offset: 2px;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #24292e;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.2s ease;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
         
         body {
             font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -121,36 +158,36 @@
             background-color: #f6f8fa;
         }
 
-/* Desktop layout - images on left */
-.photo-cell {
-    width: 45%;
-    padding-right: 15px; /* Add some breathing room */
-    vertical-align: middle; /* This is the key change for vertical centering */
-}
+        /* Desktop layout - images on left */
+        .photo-cell {
+            width: 45%;
+            padding-right: 15px; /* Add some breathing room */
+            vertical-align: middle; /* This is the key change for vertical centering */
+        }
 
-.text-cell {
-    width: 55%;
-    padding-left: 0;
-    vertical-align: middle; /* Match the vertical alignment */
-}
+        .text-cell {
+            width: 55%;
+            padding-left: 0;
+            vertical-align: middle; /* Match the vertical alignment */
+        }
 
-.photo-placeholder {
-    width: 200px; /* Fixed size */
-    height: 200px;
-    border-radius: 50%;
-    margin: 0 auto; /* Center horizontally */
-    overflow: hidden;
-    border: 2px solid #e1e4e8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: block; /* Changed to block */
-}
+        .photo-placeholder {
+            width: 200px; /* Fixed size */
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto; /* Center horizontally */
+            overflow: hidden;
+            border: 2px solid #e1e4e8;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: block; /* Changed to block */
+        }
 
-.photo-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-        
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+                
         .photo-placeholder:hover img {
             filter: saturate(1.1) contrast(1.15);
         }
@@ -232,174 +269,178 @@
         }
         
         /* Mobile layout - images on top */
-
-@media (max-width: 600px) {
-    .photo-cell {
-        width: 100%;
-        display: block;
-        text-align: center;  /* Center the image container */
-        padding: 0;          /* Remove any padding that might affect width */
-    }
-    
-    .spacer-cell {
-        display: none;
-    }
-    
-    .text-cell {
-        width: 100%;
-        display: block;
-    }
-    
-    table, tbody, tr, td {
-        display: block;
-        width: 100%;
-    }
-    
-    tr {
-        margin-bottom: 30px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #e1e4e8;
-    }
-    
-    td {
-        padding: 8px 0;
-    }
-    
-    .photo-placeholder {
-        width: 200px;        /* Fixed width */
-        height: 200px;       /* Same as width to ensure circle */
-        margin: 0 auto 15px auto;  /* Center horizontally and add bottom margin */
-    }
-    
-    .text-content {
-        padding: 0 8px 15px 8px;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-    
-    .text-content p {
-        margin-bottom: 15px;
-    }
-}
+        @media (max-width: 600px) {
+            .photo-cell {
+                width: 100%;
+                display: block;
+                text-align: center;  /* Center the image container */
+                padding: 0;          /* Remove any padding that might affect width */
+            }
+            
+            .spacer-cell {
+                display: none;
+            }
+            
+            .text-cell {
+                width: 100%;
+                display: block;
+            }
+            
+            table, tbody, tr, td {
+                display: block;
+                width: 100%;
+            }
+            
+            tr {
+                margin-bottom: 30px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #e1e4e8;
+            }
+            
+            td {
+                padding: 8px 0;
+            }
+            
+            .photo-placeholder {
+                width: 200px;        /* Fixed width */
+                height: 200px;       /* Same as width to ensure circle */
+                margin: 0 auto 15px auto;  /* Center horizontally and add bottom margin */
+            }
+            
+            .text-content {
+                padding: 0 8px 15px 8px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .text-content p {
+                margin-bottom: 15px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header-section">
+    <!-- Skip navigation for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header role="banner" class="header-section">
         <!-- Name with larger profile picture on left -->
         <div class="name-container">
-            <div class="mini-profile">
+            <div class="mini-profile" aria-hidden="true">
                  <img src="images/soft-and-hard.JPEG" alt="Amy Cheatle">
             </div>
          <div>
-    <h1>Amy Cheatle</h1>
-    <h3>→ 2025 <a href="images/ACheatle CV 2025.pdf" class="cv-link" target="_blank">CV</a> · my email is ac2288 @ cornell.edu</h3>
-</div>
+            <h1>Amy Cheatle</h1>
+            <h3>→ 2025 <a href="images/ACheatle CV 2025.pdf" class="cv-link" target="_blank">CV <span class="sr-only">(opens in new window)</span></a> · my email is ac2288 @ cornell.edu</h3>
+        </div>
         </div>
         <!-- Research Statement heading moved down -->
         <h2 class="section-title">Research Statement</h2>
         <p class="research-intro" style="text-align: justify;">
-    I am a qualitative researcher working at the intersection of Human Computer Interaction, Science and Technology Studies, and Craft Studies. I am also a PhD candidate in Science and Technology Studies at Cornell University, and an instructional designer here as well.
-</p>
-<p class="research-intro" style="text-align: justify;">
-    As a researcher, I am drawn to sites where new computational processes reconfigure work - particularly work that is collaborative, embodied and sensorially-informed. I explore how human sensing, tacit knowledge, and computational systems intermingle in situated practice, curiosities that often center on the evolution of craft-based work (such as new robotic tools being taken up in operating rooms and fine art furniture studios, or computational acoustics or CNCs entangling with classical modes of violin making).
-</p>
-<p class="research-intro" style="text-align: justify;">
-    My method is ethnographic. I practice carefully listening to participants, gently observing their day-to-day, asking questions that test my understanding, and attuning myself with the sensorial experiences of others. Through this, I aim to assist with the development of more responsive, heterogenous, compassionate, and functional technological systems.
-</p>
-    </div>
+            I am a qualitative researcher working at the intersection of Human Computer Interaction, Science and Technology Studies, and Craft Studies. I am also a PhD candidate in Science and Technology Studies at Cornell University, and an instructional designer here as well.
+        </p>
+        <p class="research-intro" style="text-align: justify;">
+            As a researcher, I am drawn to sites where new computational processes reconfigure work - particularly work that is collaborative, embodied and sensorially-informed. I explore how human sensing, tacit knowledge, and computational systems intermingle in situated practice, curiosities that often center on the evolution of craft-based work (such as new robotic tools being taken up in operating rooms and fine art furniture studios, or computational acoustics or CNCs entangling with classical modes of violin making).
+        </p>
+        <p class="research-intro" style="text-align: justify;">
+            My method is ethnographic. I practice carefully listening to participants, gently observing their day-to-day, asking questions that test my understanding, and attuning myself with the sensorial experiences of others. Through this, I aim to assist with the development of more responsive, heterogenous, compassionate, and functional technological systems.
+        </p>
+    </header>
 
-    <h2 class="section-title">Projects</h2>
-    <p class="projects-intro" style="text-align: justify;">
-     The projects below represent key investigations that inform my understanding of the sensory and embodied aspects of human-machine collaboration, as well as how social worlds give shape to our interpretations, enactments, and understandings of new technological futures. When taken together, they reveal how sensorial and tacit knowledge are never only individually held, but socially distributed, technologically mediated, and emergent through practice.  
-    </p>
-    <div class="table-container">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="photo-cell">
-                        <div class="photo-placeholder">
-                            <img src="images/ConstellationAquila.png" alt="Placeholder image">
-                        </div>
-                    </td>
-                    <td class="text-cell">
-                        <div class="text-content">
-                            <h3>How can large language models encompass more situated, embodied, and tacit ways of knowing? </h3>
-                            <p>This experimental project (where I am researcher and part of a larger team working out of Sothern Oregon University) explores how science labs can make use of a rag llm to help make their work more durable, actionable, shareable, and discoverable. What kinds of knowledge are incorporated into large language models, and what is excluded? Aquillm is a place-based AI “archive” that aims to find out. Ongoing project</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="photo-cell">
-                        <div class="photo-placeholder">
-                            <img src="images/IMG_4832.jpg" alt="Placeholder image">
-                        </div>
-                    </td>
-                    <td class="text-cell">
-                        <div class="text-content">
-                            <h3>How has the violin (and the world that surrounds and encompasses it) been made durable?</h3>
-                            <p>And, how does it react and respond to new computational processes and sensing technologies? This project examines the violin as a boundary object that traverses artistic and scientific domains, exploring how traditional craft knowledge intersects with digital measurement and modeling tools. Through ethnographic observations and interviews with luthiers, acousticians, and performers, I investigate how the materiality of instruments, embodied practices of musicians, and computational analysis co-constitute a shared sonic world. Ongoing project. </p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="photo-cell">
-                        <div class="photo-placeholder">
-                            <img src="images/sloyd.jpg" alt="Placeholder image">
-                        </div>
-                    </td>
-                    <td class="text-cell">
-                        <div class="text-content">
-                            <h3>What can craft movements teach us about human-centered computing?</h3>
-                            <p>My historical analysis of craft traditions—Scandinavian Slöyd, British Arts and Crafts, and Japanese Mingei—reveals three enduring principles that can inform more responsive technological design: sensitivity to materials and ecological contexts; integration of cognitive, emotional, and physical dimensions of making; and embodied, collaborative learning environments. <a href="images/recollecting-craft.pdf" class="paper-link" target="_blank">Read Paper</a></p>
-                        </div>
-                    </td>
-                </tr>
-           
-                <tr>
-                    <td class="photo-cell">
-                        <div class="photo-placeholder">
-                            <img src="images/davinci2.jpg" alt="Da Vinci surgical robot">
-                        </div>
-                    </td>
-                    <td class="text-cell">
-                        <div class="text-content">
-                            <h3>How do surgical teams adapt to robot-mediated sensing?</h3>
-                            <p>Drawing on ethnographic fieldwork in two teaching hospitals using the da Vinci surgical robot, I examine how robotic mediation transforms the sensory environment of surgery and necessitates new collaborative practices. I show how surgical teams develop sophisticated compensatory techniques and sensory articulations to overcome the limitations of technologically mediated perception. These adaptations create a distributed, more-than-human sensorium that extends beyond individual bodies to encompass the entire surgical team and technological system. <a href="images/sensing-coop.pdf" class="paper-link" target="_blank">Read Paper</a></p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="photo-cell">
-                        <div class="photo-placeholder">
-                            <img src="images/IMG_0097.JPG" alt="Placeholder image">
-                        </div>
-                    </td>
-                    <td class="text-cell">
-                        <div class="text-content">
-                            <h3>How do digital tools transform craft and design practices in fine art furniture making?</h3>
-                            <p> Through studio visits and interviews with renowned fine art furniture maker Wendell Castle and his team, I investigate the complex integration of digital fabrication technologies into established craft practice. Our research reveals how this hybrid environment creates new forms of creative expression, reshapes material relationships, and transforms collaborative workflows. Rather than diminishing craft knowledge, we find that digital tools become entangled with embodied expertise, creating distinctive socio-technical arrangements where digital and physical processes mutually inform each other. <a href="images/digital-entanglements.pdf" class="paper-link" target="_blank">Read Paper</a></p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="photo-cell">
-                        <div class="photo-placeholder">
-                            <img src="images/garden.jpg" alt="Garden image">
-                        </div>
-                    </td>
-                    <td class="text-cell">
-                        <div class="text-content">
-                            <h3>How can urban permaculture help us develop and document plant-people relations?</h3>
-                            <p>This passion project explores the transformation of a small urban backyard into an experimental permaculture system while building understandings of ecological relationships through direct engagement with living systems. The garden itself becomes both a research site and a material argument for coming to understand our own plant-people relations. This on-going project led to the collaborative creation of a community zine meant to probe how others answer similar questions. The project culminated in a conference talk examining participatory approaches to more-than-human narratives and a book chapter on co-creating narratives and knowledge through creative, non-institutional practice. <a href="https://issuu.com/igrimmfreelance/docs/maybethemustarddigital" class="paper-link">Read Zine</a>
-</p>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <main id="main-content" role="main">
+        <h2 class="section-title">Projects</h2>
+        <p class="projects-intro" style="text-align: justify;">
+            The projects below represent key investigations that inform my understanding of the sensory and embodied aspects of human-machine collaboration, as well as how social worlds give shape to our interpretations, enactments, and understandings of new technological futures. When taken together, they reveal how sensorial and tacit knowledge are never only individually held, but socially distributed, technologically mediated, and emergent through practice.  
+        </p>
+        <div class="table-container">
+            <table aria-label="Research Projects">
+                <tbody>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/ConstellationAquila.png" alt="Illustration of the Aquila constellation, representing the Aquillm project">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How can large language models encompass more situated, embodied, and tacit ways of knowing?</h3>
+                                <p>This experimental project (where I am researcher and part of a larger team working out of Southern Oregon University) explores how science labs can make use of a rag llm to help make their work more durable, actionable, shareable, and discoverable. What kinds of knowledge are incorporated into large language models, and what is excluded? Aquillm is a place-based AI "archive" that aims to find out. Ongoing project</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/IMG_4832.jpg" alt="Close-up image of a violin, showing the craftsmanship and detail">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How has the violin (and the world that surrounds and encompasses it) been made durable?</h3>
+                                <p>And, how does it react and respond to new computational processes and sensing technologies? This project examines the violin as a boundary object that traverses artistic and scientific domains, exploring how traditional craft knowledge intersects with digital measurement and modeling tools. Through ethnographic observations and interviews with luthiers, acousticians, and performers, I investigate how the materiality of instruments, embodied practices of musicians, and computational analysis co-constitute a shared sonic world. Ongoing project.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/sloyd.jpg" alt="Historical image of Scandinavian Slöyd craft education">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>What can craft movements teach us about human-centered computing?</h3>
+                                <p>My historical analysis of craft traditions—Scandinavian Slöyd, British Arts and Crafts, and Japanese Mingei—reveals three enduring principles that can inform more responsive technological design: sensitivity to materials and ecological contexts; integration of cognitive, emotional, and physical dimensions of making; and embodied, collaborative learning environments. <a href="images/recollecting-craft.pdf" class="paper-link" target="_blank">Read Paper <span class="sr-only">(opens PDF in new window)</span></a></p>
+                            </div>
+                        </td>
+                    </tr>
+               
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/davinci2.jpg" alt="Da Vinci surgical robot in an operating room setting">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How do surgical teams adapt to robot-mediated sensing?</h3>
+                                <p>Drawing on ethnographic fieldwork in two teaching hospitals using the da Vinci surgical robot, I examine how robotic mediation transforms the sensory environment of surgery and necessitates new collaborative practices. I show how surgical teams develop sophisticated compensatory techniques and sensory articulations to overcome the limitations of technologically mediated perception. These adaptations create a distributed, more-than-human sensorium that extends beyond individual bodies to encompass the entire surgical team and technological system. <a href="images/sensing-coop.pdf" class="paper-link" target="_blank">Read Paper <span class="sr-only">(opens PDF in new window)</span></a></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/IMG_0097.JPG" alt="Fine art furniture workshop showing digital and traditional tools">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How do digital tools transform craft and design practices in fine art furniture making?</h3>
+                                <p>Through studio visits and interviews with renowned fine art furniture maker Wendell Castle and his team, I investigate the complex integration of digital fabrication technologies into established craft practice. Our research reveals how this hybrid environment creates new forms of creative expression, reshapes material relationships, and transforms collaborative workflows. Rather than diminishing craft knowledge, we find that digital tools become entangled with embodied expertise, creating distinctive socio-technical arrangements where digital and physical processes mutually inform each other. <a href="images/digital-entanglements.pdf" class="paper-link" target="_blank">Read Paper <span class="sr-only">(opens PDF in new window)</span></a></p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/garden.jpg" alt="Urban garden showing permaculture principles and plant diversity">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How can urban permaculture help us develop and document plant-people relations?</h3>
+                                <p>This passion project explores the transformation of a small urban backyard into an experimental permaculture system while building understandings of ecological relationships through direct engagement with living systems. The garden itself becomes both a research site and a material argument for coming to understand our own plant-people relations. This on-going project led to the collaborative creation of a community zine meant to probe how others answer similar questions. The project culminated in a conference talk examining participatory approaches to more-than-human narratives and a book chapter on co-creating narratives and knowledge through creative, non-institutional practice. <a href="https://issuu.com/igrimmfreelance/docs/maybethemustarddigital" class="paper-link" target="_blank">Read Zine <span class="sr-only">(opens in new window)</span></a>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
     
-    <footer class="footer">
+    <footer role="contentinfo" class="footer">
         <p>© 2025 Amy Cheatle · Last updated March 2025</p>
     </footer>
 </body>
