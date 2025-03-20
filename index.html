@@ -121,47 +121,28 @@
             background-color: #f6f8fa;
         }
 
-        /* Desktop layout - images on left */
-        .photo-cell {
-    width: 45%;
-    display: flex;       /* Add this */
-    align-items: center; /* Add this */
-    justify-content: center; /* Add this */
-}
-/* Desktop layout - images on left */
+       /* Desktop layout - images on left */
 .photo-cell {
     width: 45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center; /* Center the content horizontally */
+    padding-right: 15px; /* Add some breathing room */
 }
 
 .photo-placeholder {
-    width: 220px;        /* Slightly smaller fixed width */
-    height: 220px;       /* Same as width to ensure circle */
-    max-width: 220px;
-    background-color: #e1e4e8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #586069;
-    font-size: 14px;
+    width: 200px; /* Fixed size */
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto; /* Center horizontally */
     overflow: hidden;
     border: 2px solid #e1e4e8;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    position: relative;
-    border-radius: 50%;
-    margin: 0 auto;
+    display: inline-block; /* Use inline-block instead of flex */
 }
 
 .photo-placeholder img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(0.9) contrast(1.1);
-    transition: filter 0.3s ease;
-
 }
         
         .photo-placeholder:hover img {
