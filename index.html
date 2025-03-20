@@ -118,11 +118,11 @@
             overflow: hidden;
             border: 2px solid #e1e4e8;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            transition: box-shadow 0.3s ease;
+            position: relative;
         }
         
         .photo-placeholder:hover {
-            transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
         
@@ -131,7 +131,7 @@
             height: 100%;
             object-fit: cover;
             filter: saturate(0.9) contrast(1.1);
-            transition: all 0.3s ease;
+            transition: filter 0.3s ease;
         }
         
         .photo-placeholder:hover img {
