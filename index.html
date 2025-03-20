@@ -121,11 +121,17 @@
             background-color: #f6f8fa;
         }
 
-       /* Desktop layout - images on left */
+/* Desktop layout - images on left */
 .photo-cell {
     width: 45%;
-    text-align: center; /* Center the content horizontally */
     padding-right: 15px; /* Add some breathing room */
+    vertical-align: middle; /* This is the key change for vertical centering */
+}
+
+.text-cell {
+    width: 55%;
+    padding-left: 0;
+    vertical-align: middle; /* Match the vertical alignment */
 }
 
 .photo-placeholder {
@@ -136,7 +142,7 @@
     overflow: hidden;
     border: 2px solid #e1e4e8;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: inline-block; /* Use inline-block instead of flex */
+    display: block; /* Changed to block */
 }
 
 .photo-placeholder img {
