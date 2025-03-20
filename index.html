@@ -232,11 +232,23 @@
         }
         
         /* Mobile layout - images on top */
-        @media (max-width: 600px) {
-            .photo-cell {
-                width: 100%;
-                display: block;
-            }
+       @media (max-width: 600px) {
+    /* Your existing mobile styles... */
+    
+    .photo-placeholder {
+        width: 200px;        /* Fixed width */
+        height: 200px;       /* Same as width to ensure circle */
+        max-width: 200px;    /* Consistent with width */
+        margin: 0 auto 15px auto;  /* Center horizontally and add bottom margin */
+    }
+    
+    .photo-cell {
+        width: 100%;
+        display: block;
+        text-align: center;  /* Center the image container */
+        padding: 0;          /* Remove any padding that might affect width */
+    }
+}
             
             .spacer-cell {
                 display: none;
