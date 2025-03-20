@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amy Cheatle - Research Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
-        
-        body {
-            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.5;
-            color: #24292e;
-            background-color: #fff;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header-section {
-            margin-bottom: 40px;
-        }
-        
-        .header-section h1 {
+.header-section h1 {
             font-family: 'Libre Baskerville', serif;
             font-size: 2.4em;
             margin-bottom: 0.1em;
@@ -51,17 +28,47 @@
             line-height: 1.6;
             color: #444d56;
             max-width: 950px;
+        }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amy Cheatle - Research Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #24292e;
+            background-color: #fff;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5em;
         }
         
         .cv-link {
-            color: #e83e8c;
+            color: rgba(36, 41, 46, 0.75);
             text-decoration: none;
             font-weight: 500;
-            margin-left: 8px;
+            font-size: 1.1em;
+            transition: all 0.2s ease;
         }
         
         .cv-link:hover {
+            color: #e83e8c;
             text-decoration: underline;
+        }
+        
+        .header-section {
+            margin-bottom: 40px;
         }
 
         .table-container {
@@ -115,12 +122,20 @@
             color: #586069;
             font-size: 14px;
             overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
         }
         
         .photo-placeholder img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: brightness(0.95) contrast(1.05);
+            transition: filter 0.3s ease;
+        }
+        
+        .photo-placeholder img:hover {
+            filter: brightness(1) contrast(1.1);
         }
 
         .text-content {
@@ -223,7 +238,7 @@
 <body>
     <div class="header-section">
         <h1><strong>Amy Cheatle</strong></h1>
-        <h2>Research Statement</h2>
+        <h2 class="section-title">Research Statement</h2>
         <h3>→ 2025 <a href="cv/amy-cheatle-cv.pdf" class="cv-link" target="_blank">CV</a></h3>
         <p class="research-intro">
             I am a qualitative researcher working at the intersection of <em>Human Computer Interaction</em>, <em>Science and Technology Studies</em>, and <em>Craft Studies</em>. I explore how human sensing, embodied ways of knowing, and computational systems intermingle in situated practice. My process as a researcher is to carefully listen to participants, to gently observe the day-to-day, to ask questions to test my understanding, and to align myself as best I can with the sensorial experiences of others. I look for sites where I can turn to the social, distributed, and emergent nature of sensing and study how new computational process reconfigure work. Through this work I aim to assist with the development of more responsive, compassionate, and functional technological systems.
@@ -232,7 +247,7 @@
 
     <h2 class="section-title">Projects</h2>
     <p class="projects-intro">
-        The following projects represent key investigations that informed my dissertation on the sensory aspects of human-machine collaboration and the evolution of craft. Each explores how embodied knowledge and sensory experience are transformed when new technologies are introduced into established practices. Together, they reveal how sensing is never individual but always socially distributed, technologically mediated, and emergent in practice. These studies help us better understand how to design more responsive systems that recognize and support the rich sensory work that makes collaboration possible.
+        The following projects represent key investigations that informed my dissertation on the sensory aspects of human-machine collaboration. Each explores how embodied knowledge and sensory experience are transformed when new technologies are introduced into established practices. Together, they reveal how sensing is never individual but always socially distributed, technologically mediated, and emergent in practice. These studies help us better understand how to design more responsive systems that recognize and support the rich sensory work that makes collaboration possible.
     </p>
     <div class="table-container">
         <table>
@@ -311,7 +326,7 @@
                 <tr>
                     <td class="photo-cell">
                         <div class="photo-placeholder">
-                            <img src="images/garden.jpg" alt="Placeholder image">
+                            <img src="images/garden.jpg" alt="Garden image">
                         </div>
                     </td>
                     <td class="spacer-cell"></td>
