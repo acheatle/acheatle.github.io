@@ -130,10 +130,15 @@
 }
 
 .photo-placeholder {
-    /* Keep your existing properties */
+    /* Modify these properties */
+    width: 250px;        /* Fixed width instead of 100% */
+    height: 250px;       /* Same as width to ensure circle */
+    max-width: 250px;    /* Keep this */
+    aspect-ratio: 1/1;   /* Keep this as backup */
+    margin: 0 auto;      /* Keep for horizontal centering */
+    
+    /* Keep all other properties the same */
     background-color: #e1e4e8;
-    width: 100%;
-    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,22 +150,15 @@
     transition: box-shadow 0.3s ease;
     position: relative;
     border-radius: 50%;
-    aspect-ratio: 1/1;
-    margin: 0 auto;
-    max-width: 250px;
 }
-        
-        .photo-placeholder:hover {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-        
-        .photo-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: saturate(0.9) contrast(1.1);
-            transition: filter 0.3s ease;
-        }
+
+/* For vertical centering in the cell */
+.photo-cell {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
         
         .photo-placeholder:hover img {
             filter: saturate(1.1) contrast(1.15);
