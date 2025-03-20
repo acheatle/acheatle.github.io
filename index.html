@@ -17,6 +17,34 @@
             padding: 20px;
         }
         
+        .header-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1em;
+            gap: 20px;
+        }
+        
+        .header-text {
+            flex: 1;
+        }
+        
+        .header-image {
+            flex: 1;
+            max-width: 50%;
+            height: 120px;
+            background-color: #e1e4e8;
+            overflow: hidden;
+            border: 2px solid #e1e4e8;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(0.9) contrast(1.1);
+        }
+        
         .header-section {
             margin-bottom: 40px;
         }
@@ -269,9 +297,16 @@
 </head>
 <body>
     <div class="header-section">
-        <h1>Amy Cheatle</h1>
-        <h2 class="section-title">Research Statement</h2>
-        <h3>→ 2025 <a href="cv/amy-cheatle-cv.pdf" class="cv-link" target="_blank">CV</a></h3>
+        <div class="header-container">
+            <div class="header-text">
+                <h1>Amy Cheatle</h1>
+                <h2 class="section-title">Research Statement</h2>
+                <h3>→ 2025 <a href="cv/amy-cheatle-cv.pdf" class="cv-link" target="_blank">CV</a></h3>
+            </div>
+            <div class="header-image">
+                <img src="images/header-image.jpg" alt="Amy Cheatle">
+            </div>
+        </div>
         <p class="research-intro" style="text-align: justify;">
             I am a qualitative researcher working at the intersection of <em>Human Computer Interaction</em>, <em>Science and Technology Studies</em>, and <em>Craft Studies</em>. I explore how human sensing, embodied ways of knowing, and computational systems intermingle in situated practice. My process as a researcher is to carefully listen to participants, to gently observe the day-to-day, to ask questions to test my understanding, and to align myself as best I can with the sensorial experiences of others. I look for sites where I can turn to the social, distributed, and emergent nature of sensing and study how new computational process reconfigure work. Through this work I aim to assist with the development of more responsive, compassionate, and functional technological systems.
         </p>
