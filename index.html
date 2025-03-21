@@ -45,28 +45,28 @@
             border: 0;
         }
         .more-button {
-    display: inline-block;
-    color: #e83e8c;
-    cursor: pointer;
-    font-weight: 500;
-    margin-left: 5px;
-    text-decoration: underline;
-    border: none;
-    background: none;
-    padding: 0;
-    font-size: 0.95em;
-}
+            display: inline-block;
+            color: #e83e8c;
+            cursor: pointer;
+            font-weight: 500;
+            margin-left: 5px;
+            text-decoration: underline;
+            border: none;
+            background: none;
+            padding: 0;
+            font-size: 0.95em;
+        }
 
-.more-button:hover {
-    color: #d6006c;
-}
+        .more-button:hover {
+            color: #d6006c;
+        }
 
-.more-text {
-    display: none;
-    margin-top: 0;  /* Changed from 10px to 0 */
-    padding-top: 0; /* Changed from 8px to 0 */
-    /* border-top: 1px dotted #e1e4e8; */ /* Removed border completely */
-}
+        .more-text {
+            display: none;
+            margin-top: 0;
+            padding-top: 0;
+            /* border-top: 1px dotted #e1e4e8; */
+        }
         
         body {
             font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -360,18 +360,18 @@
         </div>
         <!-- Research Statement heading moved down -->
         <h2 class="section-title">Research Statement</h2>
-     <p class="research-intro" style="text-align: justify;">
-    I am a qualitative researcher working at the intersection of Human Computer Interaction, Science and Technology Studies, and Craft Studies, and a PhD candidate in Science and Technology Studies at Cornell University.
-    <button id="more-button-rs" class="more-button" onclick="toggleMoreText('more-button-rs', 'more-text-rs')" aria-expanded="false" aria-controls="more-text-rs">More</button>
-</p>
-<div id="more-text-rs" class="more-text">
-    <p class="research-intro" style="text-align: justify;">
-        I explore sites where new computational processes reconfigure work - particularly work that is collaborative, embodied and sensorially-informed. I am interested in how human sensing, tacit knowledge, and computational systems intermingle in situated practice, finding craft-based work (ie: robotic tools being taken up in operating rooms or computational acoustics entering violin making) to be rich locations for learning.
-    </p>
-    <p class="research-intro" style="text-align: justify;">
-        My methods are informed by sensory ethnography. I practice carefully listening to participants, gently observing their work, asking questions that test my understanding, and slowly attuning to their sensorial experiences. Through this work I advocate for the development of more responsive, heterogenous, compassionate, and functional technological systems.
-    </p>
-</div>
+        <p class="research-intro" style="text-align: justify;">
+            I am a qualitative researcher working at the intersection of Human Computer Interaction, Science and Technology Studies, and Craft Studies, and a PhD candidate in Science and Technology Studies at Cornell University.
+            <button id="more-button-rs" class="more-button" onclick="toggleMoreText('more-button-rs', 'more-text-rs')" aria-expanded="false" aria-controls="more-text-rs">More</button>
+        </p>
+        <div id="more-text-rs" class="more-text">
+            <p class="research-intro" style="text-align: justify;">
+                I explore sites where new computational processes reconfigure work - particularly work that is collaborative, embodied and sensorially-informed. I am interested in how human sensing, tacit knowledge, and computational systems intermingle in situated practice, finding craft-based work (ie: robotic tools being taken up in operating rooms or computational acoustics entering violin making) to be rich locations for learning.
+            </p>
+            <p class="research-intro" style="text-align: justify;">
+                My methods are informed by sensory ethnography. I practice carefully listening to participants, gently observing their work, asking questions that test my understanding, and slowly attuning to their sensorial experiences. Through this work I advocate for the development of more responsive, heterogenous, compassionate, and functional technological systems.
+            </p>
+        </div>
     </header>
 
     <main id="main-content" role="main">
@@ -380,57 +380,61 @@
             <table aria-label="Research Projects">
                 <tbody>
                     <tr>
-    <td class="photo-cell">
-        <div class="photo-placeholder">
-            <img src="images/ConstellationAquila.png" alt="Illustration of the Aquila constellation, representing the Aquillm project">
-        </div>
-    </td>
-    <td class="text-cell">
-        <div class="text-content">
-            <h3>How can large language models encompass more situated, embodied, and tacit ways of knowing?</h3>
-            <p>
-                This collaborative project with Bernie Boscoe and Chandler Campbell from SOU explores how science labs can make use of a rag llm to help make their work more durable, actionable, shareable, and discoverable.
-                <button id="more-button-1" class="more-button" onclick="toggleMoreText('more-button-1', 'more-text-1')" aria-expanded="false" aria-controls="more-text-1">More</button>
-            </p>
-            <div id="more-text-1" class="more-text">
-                <p>What kinds of knowledge are incorporated into large language models, and what is excluded? Aquillm is a place-based AI "archive" that aims to find out.</p>
-            </div>
-        </div>
-    </td>
-</tr>
-                   <tr>
-    <td class="photo-cell">
-        <div class="photo-placeholder">
-            <img src="images/IMG_4832.jpg" alt="Close-up image of a violin, showing the craftsmanship and detail">
-        </div>
-    </td>
-    <td class="text-cell">
-        <div class="text-content">
-            <h3>How has the violin world been made durable?</h3>
-            <p>And, how does it react and respond to new computational processes and sensing technologies?
-                <button id="more-button-2" class="more-button" onclick="toggleMoreText('more-button-2', 'more-text-2')" aria-expanded="false" aria-controls="more-text-2">More</button>
-            </p>
-            <div id="more-text-2" class="more-text">
-                <p>This project examines the violin as a boundary object that traverses artistic and scientific domains, exploring how traditional craft knowledge intersects with digital measurement and modeling tools to create new sonic knowledge about the violin. I investigate how the materiality of instruments, embodied practices of musicians, and computational analysis co-constitute a shared sonic world. Ongoing project.</p>
-            </div>
-        </div>
-    </td>
-</tr>
-</td>
-<td class="text-cell">
-    <div class="text-content">
-        <h3>What can craft movements teach us about human-centered computing?</h3>
-        <p>My historical analysis of craft traditions—Scandinavian Slöyd, British Arts and Crafts, and Japanese Mingei—reveals three enduring principles that can inform more responsive technological design:
-            <button id="more-button-3" class="more-button" onclick="toggleMoreText('more-button-3', 'more-text-3')" aria-expanded="false" aria-controls="more-text-3">More</button>
-        </p>
-        <div id="more-text-3" class="more-text">
-            <p>sensitivity to materials and ecological contexts; integration of cognitive, emotional, and physical dimensions of making; and embodied, collaborative learning environments.</p>
-        </div>
-        <p><a href="images/recollecting-craft.pdf" class="paper-link" target="_blank">Read Paper <span class="sr-only">(opens PDF in new window)</span></a></p>
-    </div>
-</td>
-</tr>
-               
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/ConstellationAquila.png" alt="Illustration of the Aquila constellation, representing the Aquillm project">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How can large language models encompass more situated, embodied, and tacit ways of knowing?</h3>
+                                <p>
+                                    This collaborative project with Bernie Boscoe and Chandler Campbell from SOU explores how science labs can make use of a rag llm to help make their work more durable, actionable, shareable, and discoverable.
+                                    <button id="more-button-1" class="more-button" onclick="toggleMoreText('more-button-1', 'more-text-1')" aria-expanded="false" aria-controls="more-text-1">More</button>
+                                </p>
+                                <div id="more-text-1" class="more-text">
+                                    <p>What kinds of knowledge are incorporated into large language models, and what is excluded? Aquillm is a place-based AI "archive" that aims to find out.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/IMG_4832.jpg" alt="Close-up image of a violin, showing the craftsmanship and detail">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>How has the violin world been made durable?</h3>
+                                <p>And, how does it react and respond to new computational processes and sensing technologies?
+                                    <button id="more-button-2" class="more-button" onclick="toggleMoreText('more-button-2', 'more-text-2')" aria-expanded="false" aria-controls="more-text-2">More</button>
+                                </p>
+                                <div id="more-text-2" class="more-text">
+                                    <p>This project examines the violin as a boundary object that traverses artistic and scientific domains, exploring how traditional craft knowledge intersects with digital measurement and modeling tools to create new sonic knowledge about the violin. I investigate how the materiality of instruments, embodied practices of musicians, and computational analysis co-constitute a shared sonic world. Ongoing project.</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="photo-cell">
+                            <div class="photo-placeholder">
+                                <img src="images/sloyd.jpg" alt="Historical image of Scandinavian Slöyd craft education">
+                            </div>
+                        </td>
+                        <td class="text-cell">
+                            <div class="text-content">
+                                <h3>What can craft movements teach us about human-centered computing?</h3>
+                                <p>My historical analysis of craft traditions—Scandinavian Slöyd, British Arts and Crafts, and Japanese Mingei—reveals three enduring principles that can inform more responsive technological design:
+                                    <button id="more-button-3" class="more-button" onclick="toggleMoreText('more-button-3', 'more-text-3')" aria-expanded="false" aria-controls="more-text-3">More</button>
+                                </p>
+                                <div id="more-text-3" class="more-text">
+                                    <p>sensitivity to materials and ecological contexts; integration of cognitive, emotional, and physical dimensions of making; and embodied, collaborative learning environments.</p>
+                                </div>
+                                <p><a href="images/recollecting-craft.pdf" class="paper-link" target="_blank">Read Paper <span class="sr-only">(opens PDF in new window)</span></a></p>
+                            </div>
+                        </td>
+                    </tr>
                     <tr>
                         <td class="photo-cell">
                             <div class="photo-placeholder">
@@ -480,20 +484,20 @@
         <p>© 2025 Amy Cheatle · Last updated March 2025</p>
     </footer>
     <script>
-  function toggleMoreText(buttonId, moreTextId) {
-    const moreTextElement = document.getElementById(moreTextId);
-    const buttonElement = document.getElementById(buttonId);
-    
-    if (moreTextElement.style.display === "none" || moreTextElement.style.display === "") {
-      moreTextElement.style.display = "block";
-      buttonElement.textContent = "Less";
-      // Ensure smooth scrolling to view expanded content
-      moreTextElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    } else {
-      moreTextElement.style.display = "none";
-      buttonElement.textContent = "More";
-    }
-  }
-</script>
+        function toggleMoreText(buttonId, moreTextId) {
+            const moreTextElement = document.getElementById(moreTextId);
+            const buttonElement = document.getElementById(buttonId);
+            
+            if (moreTextElement.style.display === "none" || moreTextElement.style.display === "") {
+                moreTextElement.style.display = "block";
+                buttonElement.textContent = "Less";
+                // Ensure smooth scrolling to view expanded content
+                moreTextElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                moreTextElement.style.display = "none";
+                buttonElement.textContent = "More";
+            }
+        }
+    </script>
 </body>
 </html>
