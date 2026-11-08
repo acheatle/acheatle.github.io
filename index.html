@@ -102,6 +102,7 @@
         }
         .contact a { font-weight: 600; }
         .contact .sep { margin: 0 0.5em; color: var(--rule); }
+        .contact a, .nowrap { white-space: nowrap; }
 
         /* Small, quiet section labels so they don't compete with the name */
         .section-label {
@@ -122,7 +123,7 @@
 
         /* Justified on wider screens so every block shares one right edge */
         .statement p,
-        .project p:not(.project-links) {
+        .project p:not(.project-links):not(.project-meta) {
             text-align: justify;
             hyphens: auto;
             -webkit-hyphens: auto;
@@ -175,12 +176,32 @@
             margin: 0 0 0.8em;
         }
 
+        /* Venue / year / award line under each project title */
+        .project-meta {
+            margin: -4px 0 14px;
+            font-size: 0.95rem;
+            color: var(--ink-muted);
+            letter-spacing: 0.01em;
+        }
+        .project-meta .award {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .project-meta .sep,
+        .project-links .sep {
+            margin: 0 0.5em;
+            color: var(--rule);
+        }
+
         .project-links {
             margin-top: 4px;
             font-size: 1.05rem;
             font-weight: 600;
         }
-
+        .project-links .related {
+            font-weight: 400;
+            color: var(--ink-muted);
+        }
         /* ---------- Footer ---------- */
         .footer {
             margin-top: 56px;
@@ -206,9 +227,17 @@
         @media (max-width: 600px) {
             body { padding: 32px 16px; font-size: 1.0625rem; }
 
+            /* Header links wrap as whole items, no dot separators */
+            .contact {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2px 16px;
+            }
+            .contact .sep { display: none; }
+
             /* Too narrow to justify cleanly: avoid big word gaps */
             .statement p,
-            .project p:not(.project-links) {
+            .project p:not(.project-links):not(.project-meta) {
                 text-align: left;
                 hyphens: manual;
                 -webkit-hyphens: manual;
@@ -242,7 +271,7 @@
             <div>
                 <h1>Amy Cheatle</h1>
                 <p class="contact">
-                    <a href="images/Amy_Cheatle_CV_2026.pdf" target="_blank">CV 2026<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span>ac2288 @ cornell.edu
+                    <a href="images/Amy_Cheatle_CV_2026.pdf" target="_blank">CV 2026<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://orcid.org/0009-0009-8826-1865" target="_blank" rel="me">ORCID<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><span class="nowrap">ac2288 @ cornell.edu</span>
                 </p>
             </div>
         </div>
@@ -271,6 +300,7 @@
                 <img class="project-image" src="images/ConstellationAquila.png" alt="Illustration of the Aquila constellation, representing the Aquillm project" loading="lazy">
                 <article>
                     <h3>How can large language models encompass more situated, embodied, and tacit ways of knowing?</h3>
+                    <p class="project-meta">Funded by the Alfred P. Sloan Foundation, 2024–2025</p>
                     <p>This collaborative project with Bernie Boscoe and Chandler Campbell from SOU explores how science labs can make use of a RAG LLM to help make their work more durable, actionable, shareable, and discoverable.</p>
                     <p>What kinds of knowledge and sensory modalities are currently incorporated into large language models, and what are excluded? Aquillm is a place-based AI "archive" that aims to find out. Of particular interest is how sonic data from the field or from the lab helps us make sense of our research world.</p>
                 </article>
@@ -279,6 +309,7 @@
                 <img class="project-image" src="images/IMG_4832.jpg" alt="Close-up image of a violin, showing the craftsmanship and detail" loading="lazy">
                 <article>
                     <h3>How has the violin world been made durable?</h3>
+                    <p class="project-meta">Presented at Mondo Acoustica, Cremona, 2025; UC Berkeley, 2026; 4S, Toronto, 2026</p>
                     <p>And, how does it react and respond to new computational processes and sensing technologies?</p>
                     <p>This project examines the violin as a boundary object that traverses artistic and scientific domains, exploring how traditional craft knowledge intersects with digital measurement and modeling tools to create new sonic knowledge about the violin. I investigate how the materiality of instruments, embodied practices of musicians, and computational analysis co-constitute a shared sonic world. Ongoing project.</p>
                 </article>
@@ -287,34 +318,39 @@
                 <img class="project-image" src="images/sloyd boy.png" alt="Historical image of Scandinavian Slöyd craft education" loading="lazy">
                 <article>
                     <h3>What can craft movements teach us about human-centered computing?</h3>
+                    <p class="project-meta">ACM CSCW 2023</p>
                     <p>A historical analysis of craft traditions reveals three enduring principles that can inform more responsive technological design: sensitivity to materials and ecological contexts; integration of cognitive, emotional, and physical dimensions of making; and embodied, collaborative learning environments.</p>
-                    <p class="project-links"><a href="images/recollecting-craft.pdf" target="_blank">Read paper<span class="sr-only"> (opens PDF in new window)</span></a></p>
+                    <p class="project-links"><a href="images/recollecting-craft.pdf" target="_blank">Read paper<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://doi.org/10.1145/3610041" target="_blank">ACM Digital Library<span class="sr-only"> (opens in new window)</span></a></p>
                 </article>
             </li>
             <li class="project">
                 <img class="project-image" src="images/davinci2.jpg" alt="Da Vinci surgical robot in an operating room setting" loading="lazy">
                 <article>
                     <h3>How do surgical teams adapt to robot-mediated sensing?</h3>
+                    <p class="project-meta">ACM CSCW 2019<span class="sep" aria-hidden="true">·</span><span class="award">Best Paper Award</span></p>
                     <p>I examine how robotic mediation transforms the sensory environment of surgery and necessitates new collaborative practices.</p>
                     <p>I show how surgical teams develop sophisticated compensatory techniques and sensory articulations to overcome the limitations of technologically mediated sensing. These adaptations create a distributed, more-than-human sensorium that extends beyond individual bodies to encompass the entire surgical team and technological system.</p>
-                    <p class="project-links"><a href="images/sensing-coop.pdf" target="_blank">Read paper<span class="sr-only"> (opens PDF in new window)</span></a></p>
+                    <p class="project-links"><a href="images/sensing-coop.pdf" target="_blank">Read paper<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://doi.org/10.1145/3359327" target="_blank">ACM Digital Library<span class="sr-only"> (opens in new window)</span></a></p>
+                    <p class="project-links"><span class="related">Companion paper:</span> <a href="https://doi.org/10.1145/3274407" target="_blank">Operating at a Distance (CSCW 2018)<span class="sr-only"> (opens in new window)</span></a></p>
                 </article>
             </li>
             <li class="project">
                 <img class="project-image" src="images/IMG_0097.JPG" alt="Fine art furniture workshop showing digital and traditional tools" loading="lazy">
                 <article>
                     <h3>How do digital tools transform craft and design practices in fine art furniture making?</h3>
+                    <p class="project-meta">ACM CSCW 2015<span class="sep" aria-hidden="true">·</span><span class="award">Honorable Mention Award</span></p>
                     <p>At Wendell Castle studios I investigate the complex integration of digital fabrication technologies into established craft practice.</p>
                     <p>I show how this hybrid environment creates new forms of creative expression, reshapes material relationships, and transforms collaborative workflows. Rather than diminishing craft knowledge, I found that new digital tools become entangled with embodied expertise, creating distinctive socio-technical arrangements where digital and physical processes mutually inform each other.</p>
-                    <p class="project-links"><a href="images/digital-entanglements.pdf" target="_blank">Read paper<span class="sr-only"> (opens PDF in new window)</span></a></p>
+                    <p class="project-links"><a href="images/digital-entanglements.pdf" target="_blank">Read paper<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://doi.org/10.1145/2675133.2675291" target="_blank">ACM Digital Library<span class="sr-only"> (opens in new window)</span></a></p>
                 </article>
             </li>
             <li class="project">
                 <img class="project-image" src="images/garden.jpg" alt="Urban garden showing permaculture principles and plant diversity" loading="lazy">
                 <article>
                     <h3>How can urban permaculture inspire stories about plant-people relations?</h3>
+                    <p class="project-meta">Book chapter in <em>Narrating the Multispecies World</em>, 2025</p>
                     <p>This passion project <a href="https://photos.google.com/share/AF1QipNAsiXYjvbANux_iIpsPzb47rddAyEN9PhdLSdfAoydKXKHr3A97vH7PjWt09Z_bg?key=dlFzS1pLRkxfU0NwMVpHNHh4RUtSWk5TYjVwSVl3" target="_blank">explores the transformation of a small urban backyard<span class="sr-only"> (opens in new window)</span></a> into an experimental permaculture system that acts as a place to develop new ways of sensing with plants.</p>
-                    <p>The garden is a research site, philosophical and aesthetic space, and material investigation into plant-people relations. This collaborative project with Lisette Lorenz and Martin Abbott unfolded as a community 'zine, conference talk, and book chapter exploring the creative ways we might understand and narrate the multispecies world.</p>
+                    <p>The garden is a research site, philosophical and aesthetic space, and material investigation into plant-people relations. This collaborative project with Lissette Lorenz and Martin Abbott unfolded as a community 'zine, conference talk, and book chapter exploring the creative ways we might understand and narrate the multispecies world.</p>
                     <p class="project-links"><a href="https://issuu.com/igrimmfreelance/docs/maybethemustarddigital" target="_blank">Read zine<span class="sr-only"> (opens in new window)</span></a></p>
                 </article>
             </li>
