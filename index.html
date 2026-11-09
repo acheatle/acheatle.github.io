@@ -96,6 +96,14 @@
             letter-spacing: -0.01em;
         }
 
+        .role {
+            margin: 0 0 8px;
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-size: 1rem;
+            line-height: 1.45;
+            color: var(--ink-soft);
+        }
         .contact {
             margin: 0;
             font-size: 1rem;
@@ -170,15 +178,20 @@
         }
 
         /* Venue / year / award line under each project title */
+        /* Venue / talk lines read like a printed citation */
         .project-meta {
             margin: -4px 0 14px;
-            font-size: 0.9rem;
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-size: 0.88rem;
+            line-height: 1.5;
             color: var(--ink-muted);
-            letter-spacing: 0.01em;
         }
         .project-meta .award {
             color: var(--accent);
-            font-weight: 600;
+        }
+        .project-meta em {
+            font-style: normal;
         }
         .project-meta .sep,
         .project-links .sep {
@@ -261,8 +274,9 @@
             <img class="portrait" src="images/Amy-portrait.JPG" alt="Portrait of Amy Cheatle">
             <div>
                 <h1>Amy Cheatle</h1>
+                <p class="role">PhD candidate, Science &amp; Technology Studies, Cornell University</p>
                 <p class="contact">
-                    <a href="images/Amy_Cheatle_CV_2026.pdf" target="_blank">CV 2026<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://orcid.org/0009-0009-8826-1865" target="_blank" rel="me">ORCID<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><span class="nowrap" id="email">ac2288 @ cornell.edu</span>
+                    <a href="images/Amy_Cheatle_CV_2026.pdf" target="_blank">CV 2026<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://orcid.org/0009-0009-8826-1865" target="_blank" rel="me">ORCID<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://scholar.google.com/citations?user=67mMKoAAAAAJ&amp;hl=en" target="_blank" rel="me">Google Scholar<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><span class="nowrap" id="email">ac2288 @ cornell.edu</span>
                 </p>
             </div>
         </div>
@@ -288,7 +302,7 @@
                 <img class="project-image" src="images/IMG_4832.jpg" alt="Close-up image of a violin, showing the craftsmanship and detail" loading="lazy">
                 <article>
                     <h3>How has the violin world been made durable?</h3>
-                    <p class="project-meta">Presented at Mondo Acoustica, Cremona, 2025; UC Berkeley, 2026; 4S, Toronto, 2026</p>
+                    <p class="project-meta">Talks<span class="sep" aria-hidden="true">·</span>Mondo Acoustica, Cremona 2025<span class="sep" aria-hidden="true">·</span>UC Berkeley 2026<span class="sep" aria-hidden="true">·</span>4S Toronto 2026</p>
                     <p>And, how does it react and respond to new computational processes and sensing technologies?</p>
                     <p>This project examines the violin as a boundary object that traverses artistic and scientific domains, exploring how traditional craft knowledge intersects with digital measurement and modeling tools to create new sonic knowledge about the violin. I investigate how the materiality of instruments, embodied practices of musicians, and computational analysis co-constitute a shared sonic world. Ongoing project.</p>
                 </article>
