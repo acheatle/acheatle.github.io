@@ -42,6 +42,7 @@
             transition: top 0.2s ease;
         }
         .skip-link:focus { top: 0; }
+        .skip-link:hover { color: var(--paper); }
 
         .sr-only {
             position: absolute;
@@ -261,7 +262,7 @@
             <div>
                 <h1>Amy Cheatle</h1>
                 <p class="contact">
-                    <a href="images/Amy_Cheatle_CV_2026.pdf" target="_blank">CV 2026<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://orcid.org/0009-0009-8826-1865" target="_blank" rel="me">ORCID<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><span class="nowrap">ac2288 @ cornell.edu</span>
+                    <a href="images/Amy_Cheatle_CV_2026.pdf" target="_blank">CV 2026<span class="sr-only"> (opens PDF in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://orcid.org/0009-0009-8826-1865" target="_blank" rel="me">ORCID<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><span class="nowrap" id="email">ac2288 @ cornell.edu</span>
                 </p>
             </div>
         </div>
@@ -277,7 +278,7 @@
                 I explore sites where new computational processes reconfigure work, particularly work that is collaborative, embodied, and sensorially informed. I am interested in how human sensing, tacit knowledge, and computational systems intermingle in situated practice, and in how that knowledge is learned and shared. I have found craft-based work (e.g., robotic tools being taken up in operating rooms, robots in fine art furniture production at the Wendell Castle studio, and computational acoustics entering violin making) to be rich locations for learning.
             </p>
             <p>
-                Teaching and learning, much like furniture building, surgical practice, and violinmaking, can be explored through the lens of craft. As AI reconfigures fundamental skills like reading, writing, and making, I work alongside students, teachers, and policymakers to identify where <em>handwork</em> is best situated for both learning and teaching as humans and computers meet. Through this work I advocate for - and sometimes build - more transparent, responsive, and compassionate digital tools.
+                Teaching and learning, much like furniture building, surgical practice, and violinmaking, can be explored through the lens of craft. As AI reconfigures fundamental skills like reading, writing, and making, I work alongside students, teachers, and policymakers to identify where <em>handwork</em> is best situated for both learning and teaching as humans and computers meet. Through this work I advocate for—and sometimes build—more transparent, responsive, and compassionate digital tools.
             </p>
         </section>
 
@@ -337,7 +338,7 @@
                     <h3>How can urban permaculture inspire stories about plant-people relations?</h3>
                     <p class="project-meta">Book chapter, “Greening Our Thumbs,” in <em>Narrating the Multispecies World</em>, transcript, 2025</p>
                     <p>This passion project <a href="https://photos.google.com/share/AF1QipNAsiXYjvbANux_iIpsPzb47rddAyEN9PhdLSdfAoydKXKHr3A97vH7PjWt09Z_bg?key=dlFzS1pLRkxfU0NwMVpHNHh4RUtSWk5TYjVwSVl3" target="_blank">explores the transformation of a small urban backyard<span class="sr-only"> (opens in new window)</span></a> into an experimental permaculture system that acts as a place to develop new ways of sensing with plants.</p>
-                    <p>The garden is a research site, philosophical and aesthetic space, and material investigation into plant-people relations. This collaborative project with Lissette Lorenz and Martin Abbott unfolded as a community 'zine, conference talk, and book chapter exploring the creative ways we might understand and narrate the multispecies world.</p>
+                    <p>The garden is a research site, philosophical and aesthetic space, and material investigation into plant-people relations. This collaborative project with Lissette Lorenz and Martin Abbott unfolded as a community ’zine, conference talk, and book chapter exploring the creative ways we might understand and narrate the multispecies world.</p>
                     <p class="project-links"><a href="https://issuu.com/igrimmfreelance/docs/maybethemustarddigital" target="_blank">Read zine<span class="sr-only"> (opens in new window)</span></a><span class="sep" aria-hidden="true">·</span><a href="https://doi.org/10.14361/9783839470565-006" target="_blank">Read chapter<span class="sr-only"> (opens in new window)</span></a></p>
                 </article>
             </li>
@@ -347,5 +348,18 @@
     <footer class="footer">
         <p>© 2026 Amy Cheatle · Last updated November 2026</p>
     </footer>
+    <script>
+        // Build the email link in the browser so the address never
+        // appears whole in the page source (keeps most scrapers out).
+        (function () {
+            var el = document.getElementById('email');
+            if (!el) return;
+            var addr = ['ac2288', 'cornell.edu'].join('@');
+            var a = document.createElement('a');
+            a.href = 'mailto:' + addr;
+            a.textContent = addr;
+            el.replaceWith(a);
+        })();
+    </script>
 </body>
 </html>
